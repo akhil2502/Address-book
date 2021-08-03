@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using System;
+using System.Collections.Generic;
 
 namespace AddressBook
 {
@@ -6,8 +8,9 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            ContactPerson contactPerson = new ContactPerson();
-            contactPerson.AddContact();
+            Console.WriteLine("Welcome to Address Book System");
+            AddressManagment.ReadInput();
+
         }
     }
 }
