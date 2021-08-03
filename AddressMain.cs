@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,6 +6,7 @@ namespace AddressBook
 {
     class AddressBookMain
     {
+        // constants
         const int LAST_NAME = 1, ADDRESS = 2, CITY = 3, STATE = 4, ZIP = 5, PHONE_NUMBER = 6, EMAIL = 7;
 
         private LinkedList<Contact> contactList;
@@ -15,6 +15,7 @@ namespace AddressBook
         {
             this.contactList = new LinkedList<Contact>();
         }
+        //this method add details to the address book
         public void AddContactDetails(string firstName, string lastName, string address, string city, string state, long zipCode, long phoneNumber, string email)
         {
             Contact contactDetails = new Contact(firstName, lastName, address, city, state, zipCode, phoneNumber, email);
@@ -77,6 +78,19 @@ namespace AddressBook
                         default:
                             break;
                     }
+                }
+            }
+        }
+         public void DeleteContact(string name)
+     
+        {
+            foreach (Contact contact in this.contactList)
+            {
+                if (contact.firstName.Equals(name))
+                {
+                    this.contactList.Remove(contact);
+                    Console.WriteLine("Contact Deleted Successfully");
+                    break;
                 }
             }
         }
