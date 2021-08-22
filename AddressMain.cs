@@ -81,8 +81,11 @@ namespace AddressBook
                 }
             }
         }
-         public void DeleteContact(string name)
-     
+        /// <summary>
+        /// delete a contact from address book.
+        /// </summary>
+        /// <param name="name"></param>
+        public void DeleteContact(string name)
         {
             foreach (Contact contact in this.contactList)
             {
